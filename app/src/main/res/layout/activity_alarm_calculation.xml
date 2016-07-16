@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarms.AlarmCalculation">
+
+    <ImageView
+        android:id="@+id/myImage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_user_default" />
+
+    <TextView
+        android:id="@+id/equation_id"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 x 13 + 13 x 14"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/myImage"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/equal_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_alignBottom="@+id/equation_id"
+        android:layout_toEndOf="@+id/equation_id"
+        android:text="="
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/answer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/equal_sign"
+        android:ems="10"
+        android:layout_alignBottom="@+id/equation_id"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:text="Stop Alarm" />
+
+</RelativeLayout>
